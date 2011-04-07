@@ -1,7 +1,7 @@
 <?php
 
-const POSTS_DIR = 'posts';
-const SALT = 'NaCl';
+define('POSTS_DIR', 'posts');
+define('SALT', 'NaCl');
 date_default_timezone_set('UTC');
 
 function delete_token($offset = 0)
