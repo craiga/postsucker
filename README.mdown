@@ -1,0 +1,1 @@
+Postsucker is a simple tool for showing what is `POST`ed to a URL. It's supposed to be simple, lightweight and portable. It's very young and probably isn't for anything like a production environment.
