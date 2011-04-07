@@ -1,1 +1,5 @@
-Postsucker is a simple tool for showing what is `POST`ed to a URL. It's supposed to be simple, lightweight and portable. It's very young and probably isn't for anything like a production environment.
+Postsucker is a simple tool for showing what is POSTed to a URL. It's useful for monitoring POST notifications from web services, such as [PayPal's Instant Payment Notifications](http://www.paypal.com/ipn).
+
+It's supposed to be simple, lightweight and portable. It should run in any environment where PHP is allowed to write to disk. If you find a problem with it, [please report it or contribute a solution](http://github.com/craiga/postsucker).
+
+It's very young and isn't suitable for a production environment.
