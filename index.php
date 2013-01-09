@@ -64,7 +64,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 	{
 		file_put_contents(
 			sprintf("%s/%s.post", POSTS_DIR, time()),
-			$HTTP_RAW_POST_DATA
+			file_get_contents("php://input")
 		);
 	}
 }
