@@ -4,6 +4,11 @@ define('POSTS_DIR', 'posts');
 define('SALT', 'NaCl');
 date_default_timezone_set('UTC');
 
+function handle_exception($e) {
+	printf("Unhandled %s\n%s", get_class($e), $e->getMessage());
+}
+set_exception_handler("handle_exception");
+
 function delete_token($offset = 0)
 {
 	return sha1((int)(time() / (24 * 60 * 60)) + $offset . SALT);
@@ -59,7 +64,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 	{
 		file_put_contents(
 			sprintf("%s/%s.post", POSTS_DIR, time()),
-			http_build_query($_POST)
+			$HTTP_RAW_POST_DATA
 		);
 	}
 }
